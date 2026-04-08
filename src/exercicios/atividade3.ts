@@ -5,16 +5,26 @@ Escreva uma função que transforme esse array em um único objeto, onde as chav
  */
 
 interface Produto {
-    categoria: string;
-    quantidade: number;
-  }
+  categoria: string;
+  quantidade: number;
+}
 
-const produtos: Produto[] = [
-    { categoria: "eletronicos", quantidade: 10 },
-    { categoria: "roupas", quantidade: 5 },
-    { categoria: "eletronicos", quantidade: 7 },
-    { categoria: "alimentos", quantidade: 20 },
-    { categoria: "roupas", quantidade: 3 }
+export const produtos: Produto[] = [
+  { categoria: "eletronicos", quantidade: 10 },
+  { categoria: "roupas", quantidade: 5 },
+  { categoria: "eletronicos", quantidade: 7 },
+  { categoria: "alimentos", quantidade: 20 },
+  { categoria: "roupas", quantidade: 3 }
 ];
 
-export const agruparEstoque()
+export const agruparEstoque = (lista: Produto[]) => {
+  return lista.reduce((acc, produto) => {
+    if (!acc[produto.categoria]) {
+      acc[produto.categoria] = 0;
+    }
+
+    acc[produto.categoria] += produto.quantidade;
+
+    return acc;
+  }, {} as Record<string, number>);
+};

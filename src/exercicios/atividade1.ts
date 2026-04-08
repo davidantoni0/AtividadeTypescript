@@ -7,11 +7,6 @@ Retorne o valor final e exiba no console
  */
 
 
-interface Produtos {
-    
-}
-
-
 export const calculoDesconto = (valor: number, categoria: string): number =>{
     if (categoria === "ELETRONICOS"){
         return valor * 0.9;
