@@ -1,0 +1,25 @@
+{
+  "name": "atividadetypescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx --watch src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidantoni0/AtividadeTypescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/davidantoni0/AtividadeTypescript/issues"
+  },
+  "homepage": "https://github.com/davidantoni0/AtividadeTypescript#readme",
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
