@@ -16,3 +16,5 @@ export const calculoDesconto = (valor: number, categoria: string): number =>{
     }
     return -1
 };
+
+//Versão corrigida:

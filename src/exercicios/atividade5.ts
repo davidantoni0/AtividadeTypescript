@@ -22,3 +22,5 @@ export const mensagemStatus = (status: Status): string =>{
             return "Sla"
     }
 }
+
+//Versão corrigida:

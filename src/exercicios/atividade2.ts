@@ -22,3 +22,9 @@ export const users: User[] = [
 export const nomeUser = (lista: User[]): string[] => {
     return lista.map(user => user.nome);
   };
+
+//Versão corrigida:
+
+export const filtrarUsuarios = (users: User[]) =>{
+    return users.map((user)=> user.nome)
+}

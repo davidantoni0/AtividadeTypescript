@@ -23,3 +23,5 @@ export const buscarPorId = <T extends { id: number }>(
   ): T | undefined => {
     return lista.find(item => item.id === id);
   };
+
+//Versão corrigida:

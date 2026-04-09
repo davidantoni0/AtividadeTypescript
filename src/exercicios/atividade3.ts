@@ -28,3 +28,14 @@ export const agruparEstoque = (lista: Produto[]) => {
     return acc;
   }, {} as Record<string, number>);
 };
+
+//Versão corrigida:
+
+export const agruparPorcategoria = (itens:Produto[]):Record<string, number> =>{
+  const agrupados = itens.reduce((acc,itemAtual)=>{
+    const cat = itemAtual.categoria
+    acc[cat] = (acc[cat] || 0) + itemAtual.quantidade;
+    return acc;
+  }, {});
+  return agrupados
+}
